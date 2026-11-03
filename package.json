@@ -1,7 +1,7 @@
 {
   "name": "easydota",
   "productName": "EasyDota",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dota 2 mod patcher & toolkit",
   "author": "ken1kwas",
   "license": "GPL-3.0-or-later",
@@ -66,7 +66,7 @@
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
-      "artifactName": "${productName}-${version}-Setup.${ext}"
+      "artifactName": "${productName}-Setup.${ext}"
     },
     "linux": {
       "target": [
@@ -74,7 +74,7 @@
       ],
       "category": "Game"
     },
-    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
+    "artifactName": "${productName}-${os}-${arch}.${ext}"
   },
   "dependencies": {
     "@xmldom/xmldom": "^0.8.10",
