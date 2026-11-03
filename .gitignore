@@ -1,0 +1,11 @@
+node_modules/
+dist/
+Minify/config/
+Minify/cache/
+Minify/logs/
+Minify/backup/
+Minify/vpk_*/
+Minify/ui/web/node_modules/
+Minify/ui/web/dist/
+Minify/plugins/*/ui/
+Minify/Source2Viewer-CLI*

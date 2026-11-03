@@ -1,0 +1,31 @@
+{
+  "panorama/layout/dashboard_background_last_match.xml": [
+    {
+      "action": "insert_before",
+      "selector": "#BackgroundScene",
+      "xml": "<Movie id='BackgroundMovie' src='s2r://panorama/videos/background.webm' autoplay='onload' repeat='true' controls='none' hittest='false' />"
+    },
+    {
+      "action": "set_attribute",
+      "selector": "#BackgroundScene",
+      "attribute": "map",
+      "value": ""
+    }
+  ],
+  "panorama/layout/dashboard.xml": [
+    {
+      "action": "set_attribute",
+      "selector": "#DashboardBackgroundManager",
+      "attribute": "override-background",
+      "value": "DOTADashboardBackgroundLastMatch"
+    }
+  ],
+  "panorama/layout/dashboard_background_manager.xml": [
+    {
+      "action": "set_attribute",
+      "selector": "DOTADashboardBackgroundManager",
+      "attribute": "override-background",
+      "value": "DOTADashboardBackgroundLastMatch"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+/* g:panorama/styles/chat */
+DOTAChat#HudChat {
+  y: -145px;
+}
+
+/* g:panorama/styles/hud/dota_hud_top_bar */
+DOTATopBar {
+  ui-scale: <&top_bar_scale>;
+}
+
+#TimeOfDay {
+  ui-scale: <&time_of_day_scale>;
+}
+
+#TimeOfDayBG {
+  ui-scale: <&time_of_day_bg_scale>;
+}
+
+/* g:panorama/styles/hud/hud_reborn */
+#lower_hud,
+#minimap_container {
+  ui-scale: <&lower_hud_minimap_scale>;
+  margin-left: <&lower_hud_minimap_margin_left>;
+  margin-right: <&lower_hud_minimap_margin_right>;
+}
+
+#SpectatorToastManager {
+  ui-scale: <&spectator_toast_scale>;
+}
+
+#center_with_stats {
+  ui-scale: <&center_with_stats_scale>;
+}

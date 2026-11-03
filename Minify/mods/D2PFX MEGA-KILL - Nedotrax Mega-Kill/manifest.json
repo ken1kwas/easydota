@@ -1,0 +1,21 @@
+{
+  "browser": "d2pfx",
+  "name": "Nedotrax Mega-Kill",
+  "category": "mega-kill",
+  "author": null,
+  "sender": null,
+  "links": [
+    {
+      "type": "preview",
+      "url": "assets/previews/mega-kill/Nedotrax-Mega-Kill.mp4"
+    },
+    {
+      "type": "source",
+      "url": "https://ru.dota2changer.com/skins_dota_2_mods-sexy_woman_mega-kill/"
+    }
+  ],
+  "tags": [],
+  "version": "0.5",
+  "label": null,
+  "source_date": 1763202238
+}

@@ -1,0 +1,99 @@
+/* g:panorama/styles/dashboard */
+
+#XmlInspectorButtonsContainer {
+  align: left top;
+  flow-children: right;
+  margin: 10px;
+  z-index: 99999;
+}
+
+.XmlInspectorButton {
+  background-color: #ffffff0d;
+  border: 0px;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+  width: 48px;
+}
+
+.XmlInspectorButton:hover {
+  background-color: #ffffff1a;
+}
+
+.XmlInspectorButton Label {
+  color: #ccc;
+  font-size: 11px;
+  horizontal-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  vertical-align: center;
+}
+
+.XmlInspectorButton:hover Label {
+  color: #fff;
+}
+
+#XmlInspectorOverlay {
+  background-color: #000000cc;
+  height: 100%;
+  width: 100%;
+}
+
+#XmlInspectorPopup {
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+}
+
+#XmlInspectorContainer {
+  background-color: #1e1e1e;
+  border: 2px solid #444;
+  flow-children: down;
+  height: 75%;
+  horizontal-align: center;
+  padding: 0px;
+  vertical-align: center;
+  width: 75%;
+}
+
+#XmlInspectorTitle {
+  color: #ddd;
+  font-size: 16px;
+  horizontal-align: left;
+  letter-spacing: 2px;
+  margin: 8px 12px;
+  text-transform: uppercase;
+}
+
+.XmlInspectorCloseBtn {
+  background-color: #4a2;
+  horizontal-align: right;
+  margin: 8px 12px;
+  padding: 2px 10px;
+}
+
+.XmlInspectorCloseBtn:hover {
+  background-color: #6c3;
+}
+
+.XmlInspectorCloseBtn Label {
+  color: #000;
+  font-size: 12px;
+  horizontal-align: center;
+  vertical-align: center;
+}
+
+.XmlInspectorCloseBtn:hover Label {
+  color: #fff;
+}
+
+#XmlInspectorEntry {
+  background-color: #0a0a0a;
+  border: 1px solid #333;
+  color: #8f8;
+  font-size: 13px;
+  height: fill-parent-flow(1);
+  margin: 0px 0px 8px 0px;
+  padding: 8px 12px;
+  width: 100%;
+}

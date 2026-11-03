@@ -1,0 +1,32 @@
+{
+  "name": "dota2-minify-ts",
+  "version": "4.0.0",
+  "description": "Dota2 Mod Patcher & Toolkit — TypeScript/Electron port of dota2-minify",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "main": "dist/app/electron-main.js",
+  "bin": {
+    "minify": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:web": "npm --prefix Minify/ui/web install && npm --prefix Minify/ui/web run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json --noEmit",
+    "start": "npm run build && electron .",
+    "cli": "node dist/cli.js",
+    "test": "npm run build && node --test dist/tests/*.test.js"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "adm-zip": "^0.5.16",
+    "commander": "^12.1.0",
+    "jsonc-parser": "^3.3.1",
+    "tar": "^7.4.3",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.5",
+    "@types/node": "^22.9.0",
+    "electron": "^33.2.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "settings": [
+    {
+      "key": "fetch_guides",
+      "text": "Fetch Latest Guides",
+      "type": "button"
+    }
+  ],
+  "skip_workshop_check": true
+}

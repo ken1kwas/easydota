@@ -1,0 +1,26 @@
+/* g:panorama/styles/dashboard */
+DOTADashboard,
+#DashboardCore,
+#DashboardOverlay,
+#DashboardForeground {
+  background-image: <&bg_img_style>;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* g:panorama/styles/showcase/showcase_background */
+#BackgroundImage {
+  visibility: collapse;
+}
+
+/* g:panorama/styles/hud/dota_hud_pregame */
+.LowVisualQuality #PregameBGStatic {
+  background-image: <&bg_img_style>;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* g:panorama/styles/hero_loadout_background_images */
+#HeroLoadoutBackgroundImageContainer {
+  visibility: collapse;
+}

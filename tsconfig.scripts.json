@@ -1,0 +1,19 @@
+{
+  "//": "Type-checks mod scripts and plugin backends. They are transpiled on the fly at runtime (see src/core/script-loader.ts).",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@minify/sdk": ["src/sdk.ts"]
+    },
+    "types": ["node"]
+  },
+  "include": ["Minify/mods/**/*.ts", "Minify/plugins/*/*.ts", "src/sdk.ts"]
+}
