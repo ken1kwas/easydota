@@ -1,6 +1,6 @@
 import type { Announcement } from "./types";
 
-export const ANNOUNCEMENTS_URL = "https://egezenn.github.io/dota2-minify/announcements.json";
+export const ANNOUNCEMENTS_URL = "https://raw.githubusercontent.com/ken1kwas/easydota/master/announcements.json";
 export const STATE_KEY = "announcements_seen";
 
 export function getAnnouncementId(ann: Announcement): string {

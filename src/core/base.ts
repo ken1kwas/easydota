@@ -3,8 +3,11 @@
 import os from "node:os";
 import path from "node:path";
 
+/** Upstream engine version: community registry entries declare compatibility against it. */
 export const VERSION = "2rc9";
-export const TITLE = `Minify ${VERSION}`;
+/** EasyDota release version (package.json), used by the updater. */
+export const APP_VERSION: string = require("../../package.json").version;
+export const TITLE = "EasyDota";
 
 export const OS = process.platform;
 export const MACHINE = os.arch().toLowerCase(); // x64, arm64, arm, ia32 ...
@@ -25,8 +28,8 @@ export const state = {
   originalCwd: process.cwd(),
 };
 
-export const OWNER = "Egezenn";
-export const REPO = "dota2-minify";
+export const OWNER = "ken1kwas";
+export const REPO = "easydota";
 
 if (isLinux) {
   if (process.env.WAYLAND_DISPLAY || process.env.XDG_SESSION_TYPE === "wayland") {
@@ -59,7 +62,8 @@ export const STEAM_DOTA_ID = "570";
 
 function resolveBaseDir(): string {
   if (process.env.MINIFY_ROOT) return path.resolve(process.env.MINIFY_ROOT);
-  if (FROZEN) return path.dirname(process.execPath);
+  // packaged: mods, bin, locales ... live in <install dir>/data (see "extraFiles" in package.json)
+  if (FROZEN) return path.join(path.dirname(process.execPath), "data");
   // dist/core/base.js -> <project>/Minify
   return path.resolve(__dirname, "..", "..", "Minify");
 }
@@ -112,8 +116,8 @@ export const paths = {
 };
 
 // links
-export const discord = "https://discord.com/invite/9867CPv7cy";
-export const telegram = "https://t.me/dota2minify";
+export const discord = "https://discord.gg/4VYAK473Mu";
+export const telegram = "https://t.me/kenaaaaann";
 export const github = `https://github.com/${OWNER}/${REPO}`;
 export const githubLatest = github + "/releases/latest";
-export const githubIo = `https://${OWNER}.github.io/${REPO}`;
+export const githubIo = githubLatest;

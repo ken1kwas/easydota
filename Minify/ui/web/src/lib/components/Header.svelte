@@ -2,10 +2,8 @@
   import { t } from "../i18n";
   import { Bug, Folder, Hammer, HelpCircle, Power } from "lucide-svelte";
   import ghIcon from "../../assets/github.svg";
-  import wikiIcon from "../../assets/wiki.ico";
   import discordIcon from "../../assets/discord.svg";
   import telegramIcon from "../../assets/telegram.png";
-  import bmcIcon from "../../assets/buymeacoffee.svg";
 
   export let activeTab: string;
   export let isPatching: boolean;
@@ -109,27 +107,17 @@
       <button
         type="button"
         class="header-link-btn"
-        on:click={() => openExternal("https://egezenn.github.io/dota2-minify")}
-        title="GitHub IO"
-        aria-label="GitHub IO"
+        on:click={() => openExternal("https://github.com/ken1kwas/easydota")}
+        title="GitHub"
+        aria-label="GitHub"
       >
-        <img src={ghIcon} alt="GitHub IO" class="header-link-icon gh-icon" />
+        <img src={ghIcon} alt="GitHub" class="header-link-icon gh-icon" />
       </button>
 
       <button
         type="button"
         class="header-link-btn"
-        on:click={() => openExternal("https://github.com/egezenn/dota2-minify/wiki")}
-        title="GitHub Wiki"
-        aria-label="GitHub Wiki"
-      >
-        <img src={wikiIcon} alt="GitHub Wiki" class="header-link-icon" />
-      </button>
-
-      <button
-        type="button"
-        class="header-link-btn"
-        on:click={() => openExternal("https://discord.com/invite/9867CPv7cy")}
+        on:click={() => openExternal("https://discord.gg/4VYAK473Mu")}
         title="Discord"
         aria-label="Discord"
       >
@@ -139,21 +127,11 @@
       <button
         type="button"
         class="header-link-btn"
-        on:click={() => openExternal("https://t.me/dota2minify")}
+        on:click={() => openExternal("https://t.me/kenaaaaann")}
         title="Telegram"
         aria-label="Telegram"
       >
         <img src={telegramIcon} alt="Telegram" class="header-link-icon" />
-      </button>
-
-      <button
-        type="button"
-        class="header-link-btn"
-        on:click={() => openExternal("https://buymeacoffee.com/egezenn")}
-        title="BuyMeACoffee"
-        aria-label="BuyMeACoffee"
-      >
-        <img src={bmcIcon} alt="BuyMeACoffee" class="header-link-icon" />
       </button>
     </div>
 

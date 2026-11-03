@@ -76,7 +76,7 @@
         errorMessage = err?.message || "Failed to start update";
       }
     } else {
-      window.open("https://egezenn.github.io/dota2-minify", "_blank");
+      window.open("https://github.com/ken1kwas/easydota/releases/latest", "_blank");
       downloadStatus = "idle";
       isDownloading = false;
       onClose();

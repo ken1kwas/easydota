@@ -1,6 +1,6 @@
 import type { UpdateInfo } from "./types";
 
-export const GITHUB_RELEASES_URL = "https://api.github.com/repos/Egezenn/dota2-minify/releases";
+export const GITHUB_RELEASES_URL = "https://api.github.com/repos/ken1kwas/easydota/releases";
 
 export async function getAppVersion(): Promise<string | null> {
   try {
@@ -120,7 +120,7 @@ export async function checkForUpdates(
         let downloadUrl = "";
         if (Array.isArray(rel.assets)) {
           const exeAsset = rel.assets.find(
-            (a: any) => typeof a.name === "string" && a.name.toLowerCase().endsWith(".exe"),
+            (a: any) => typeof a.name === "string" && a.name.toLowerCase().endsWith("-setup.exe"),
           );
           const zipAsset = rel.assets.find(
             (a: any) => typeof a.name === "string" && a.name.toLowerCase().endsWith(".zip"),
@@ -136,7 +136,7 @@ export async function checkForUpdates(
           currentVersion: current,
           title: rel.name || `Release v${remoteVer}`,
           body: rel.body || "",
-          releaseUrl: rel.html_url || `https://github.com/Egezenn/dota2-minify/releases/tag/${tag}`,
+          releaseUrl: rel.html_url || `https://github.com/ken1kwas/easydota/releases/tag/${tag}`,
           downloadUrl: downloadUrl || rel.html_url,
           isPrerelease: isPre,
           publishedAt: rel.published_at,

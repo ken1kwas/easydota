@@ -1,12 +1,14 @@
 {
-  "name": "dota2-minify-ts",
-  "version": "4.0.0",
-  "description": "Dota2 Mod Patcher & Toolkit — TypeScript/Electron port of dota2-minify",
+  "name": "easydota",
+  "productName": "EasyDota",
+  "version": "1.0.0",
+  "description": "Dota 2 mod patcher & toolkit",
+  "author": "ken1kwas",
   "license": "GPL-3.0-or-later",
   "private": true,
   "main": "dist/app/electron-main.js",
   "bin": {
-    "minify": "dist/cli.js"
+    "easydota": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -14,7 +16,65 @@
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json --noEmit",
     "start": "npm run build && electron .",
     "cli": "node dist/cli.js",
-    "test": "npm run build && node --test dist/tests/*.test.js"
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "dist": "npm run build && npm run build:web && electron-builder --publish never",
+    "dist:win": "npm run build && npm run build:web && electron-builder --win --publish never",
+    "dist:linux": "npm run build && npm run build:web && electron-builder --linux --publish never"
+  },
+  "build": {
+    "appId": "io.github.ken1kwas.easydota",
+    "productName": "EasyDota",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "!dist/tests/**",
+      "!dist/**/*.map",
+      "!dist/**/*.d.ts",
+      "package.json"
+    ],
+    "extraFiles": [
+      {
+        "from": "Minify",
+        "to": "data",
+        "filter": [
+          "mods/**",
+          "!mods/D2PFX */**",
+          "!mods/D2PFX *",
+          "bin/**",
+          "locales/**",
+          "themes/**",
+          "plugins/*/manifest.json",
+          "plugins/*/*.ts",
+          "plugins/*/locales/**",
+          "plugins/*/ui/**",
+          "ui/web/dist/**"
+        ]
+      },
+      "LICENSE",
+      "README.md"
+    ],
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "${productName}-${version}-Setup.${ext}"
+    },
+    "linux": {
+      "target": [
+        "tar.gz"
+      ],
+      "category": "Game"
+    },
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}"
   },
   "dependencies": {
     "@xmldom/xmldom": "^0.8.10",
@@ -27,6 +87,7 @@
   "devDependencies": {
     "@types/adm-zip": "^0.5.5",
     "@types/node": "^22.9.0",
-    "electron": "^33.2.0"
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
   }
 }

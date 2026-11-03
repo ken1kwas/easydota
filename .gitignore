@@ -9,3 +9,8 @@ Minify/ui/web/node_modules/
 Minify/ui/web/dist/
 Minify/plugins/*/ui/
 Minify/Source2Viewer-CLI*
+
+release/
+# mods installed locally through the D2PFX browser
+Minify/mods/D2PFX */
+Minify/mods/.d2pfx-*

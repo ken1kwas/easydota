@@ -79,7 +79,7 @@ export class Api {
     }
   }
   get_version() {
-    return base.VERSION;
+    return base.APP_VERSION;
   }
   is_debug_env() {
     return this.configService.isDebugEnv();
@@ -87,7 +87,8 @@ export class Api {
 
   static isPortable(): boolean {
     if (!base.FROZEN) return true;
-    return !fs.existsSync(path.join(path.dirname(process.execPath), "unins000.exe"));
+    // the NSIS installer leaves an uninstaller next to the exe; the zip build does not
+    return !fs.existsSync(path.join(path.dirname(process.execPath), "Uninstall EasyDota.exe"));
   }
 
   perform_update(url: string) {
@@ -96,7 +97,7 @@ export class Api {
       return false;
     }
     void (async () => {
-      const name = url.split("?")[0].split("/").pop() || "Minify-Setup.exe";
+      const name = url.split("?")[0].split("/").pop() || "EasyDota-Setup.exe";
       const installer = path.join(os.tmpdir(), name);
       output.addText(`Downloading update: ${name}...`);
       const ok = await mfs.downloadFile(url, installer, { name, taskId: "app-update", emitProgress: true });
@@ -105,7 +106,7 @@ export class Api {
         return;
       }
       await utils.sleep(2000);
-      output.addText("Launching installer and closing Minify...");
+      output.addText("Launching installer and closing EasyDota...");
       try {
         launchDetached(installer);
       } catch (err) {
