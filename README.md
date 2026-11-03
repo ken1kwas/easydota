@@ -9,7 +9,6 @@ A desktop mod patcher for Dota 2. Pick the mods you want, press **Patch**, and l
 Run the installer and launch EasyDota from the Start menu. No setup or coding required.
 
 - Prefer no installation? Grab the [portable zip](https://github.com/ken1kwas/easydota/releases/latest/download/EasyDota-win-x64.zip), extract it anywhere and run `EasyDota.exe`.
-- Linux: [EasyDota-linux-x64.tar.gz](https://github.com/ken1kwas/easydota/releases/latest/download/EasyDota-linux-x64.tar.gz)
 - All versions: [Releases](https://github.com/ken1kwas/easydota/releases)
 
 > **Windows SmartScreen:** the app isn't code-signed, so on first launch Windows may show "Windows protected your PC".
